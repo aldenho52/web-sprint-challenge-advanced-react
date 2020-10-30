@@ -29,10 +29,10 @@ function App() {
   }
 
   return (
-    <div>
+    <div className={darkMode ? '' : 'lightMode'}>
       <Router>
-        <nav className="container">
-          <h1>
+        <nav className={darkMode ? 'container' : 'container lightMode'}>
+          <h1 className={darkMode ? '' : 'lightMode-header'}>
             React Plants <span role="img">🌿</span>
           </h1>
           <ul className="steps">
@@ -55,7 +55,7 @@ function App() {
         <Route
           exact
           path="/"
-          render={() => <PlantList addToCart={addToCart} />}
+          render={() => <PlantList addToCart={addToCart} darkMode={darkMode}  />}
         />
         <Route
           path="/cart"
@@ -64,10 +64,11 @@ function App() {
               {...props}
               cart={cart}
               removeFromCart={removeFromCart}
+              darkMode={darkMode}
             />
           )}
         />
-        <Route path="/checkout" component={CheckoutForm} />
+        <Route path="/checkout" component={CheckoutForm} darkMode={darkMode}/>
       </Router>
     </div>
   );
