@@ -252,12 +252,9 @@ pre {
   border-bottom: 2px solid !important;
 }
 
-.lightMode {
+#lightMode {
   color: black;
-  background: #ededed;
-  .nav {
-    color: black;
-  }
+  background: #9e9e9e;
 }
 
 .lightMode-header {

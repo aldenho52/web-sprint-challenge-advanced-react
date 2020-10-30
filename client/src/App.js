@@ -29,7 +29,7 @@ function App() {
   }
 
   return (
-    <div className={darkMode ? '' : 'lightMode'}>
+    <div id={darkMode ? '' : 'lightMode'}>
       <Router>
         <nav className={darkMode ? 'container' : 'container lightMode'}>
           <h1 className={darkMode ? '' : 'lightMode-header'}>

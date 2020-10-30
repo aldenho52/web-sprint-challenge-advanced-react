@@ -1,11 +1,14 @@
-import React, { Component, useState } from "react";
+import React, {useState} from "react";
 import axios from "axios";
 
-export default class PlantList extends Component {
+export default class PlantList extends React.Component {
   // add state with a property called "plants" - initialize as an empty array
-  state = {
-    plants: [],
-    filteredPlantsInput: '',
+  constructor(props) {
+    super(props)
+    this.state = {
+      plants: [],
+      filteredPlantsInput: '',
+    }
   }
 
   // when the component mounts:
