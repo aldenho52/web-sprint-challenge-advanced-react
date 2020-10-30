@@ -33,41 +33,44 @@ const CheckoutForm = (props) => {
     <>
       <form onSubmit={handleMessageSubmit}>
         <h2>Checkout Form</h2>
-        <label>
+        <label htmlFor='firstName'>
           First Name:
           <input
             name="firstName"
             value={values.firstName}
             onChange={handleValueChanges}
+            id="firstName"
           />
         </label>
-        <label>
+        <label htmlFor='lastName'>
           Last Name:
           <input
             name="lastName"
             value={values.lastName}
             onChange={handleValueChanges}
+            id="lastName"
           />
         </label>
-        <label>
+        <label htmlFor='address'>
           Address:
           <input
             name="address"
             value={values.address}
             onChange={handleValueChanges}
+            id='address'
           />
         </label>
-        <label>
+        <label htmlFor='city'>
           City:
-          <input name="city" value={values.city} onChange={handleValueChanges} />
+          <input name="city" value={values.city} onChange={handleValueChanges} id='city' />
         </label>
-        <label>
+        <label htmlFor='state'>
           State:
-          <input name="state" value={values.state} onChange={handleValueChanges} />
+          <input name="state" value={values.state} onChange={handleValueChanges} id='state'/>
         </label>
-        <label>
+        <label htmlFor='zip'>
           Zip:
-          <input name="zip" value={values.zip} onChange={handleValueChanges} />
+          <input id='zip' name="zip" value={values.zip} onChange={handleValueChanges} />
         </label>
         <button>Checkout</button>
       </form>
