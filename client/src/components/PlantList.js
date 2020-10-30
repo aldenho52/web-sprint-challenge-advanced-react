@@ -5,7 +5,7 @@ export default class PlantList extends Component {
   // add state with a property called "plants" - initialize as an empty array
   state = {
     plants: [],
-    filteredPlantsInput: ''
+    filteredPlantsInput: '',
   }
 
   // when the component mounts:
