@@ -35,18 +35,6 @@ export default class PlantList extends Component {
     })
   }
 
-  // componentDidMount() {
-  //   this.setState({
-  //     plants: JSON.parse(window.localStorage.getItem('plants'))
-  //   })
-  // }
-
-  // componentDidUpdate() {
-  //   window.localStorage.setItem('plants', JSON.stringify(this.state.plants))
-  // }
-
-
-
   /*********  DON'T CHANGE ANYTHING IN THE RENDER FUNCTION *********/
   render() {
     return (
