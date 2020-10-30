@@ -9,7 +9,8 @@ This is an individual assessment. All work must be your own. Your challenge scor
 You are not allowed to collaborate during the sprint challenge. However, you are encouraged to follow the twenty-minute rule and seek support from your TL if you need direction.
 
 _You have **three hours** to complete this challenge. Plan your time accordingly._
-asdfdsfsdfdsf
+
+
 ## Introduction
 
 In meeting the minimum viable product (MVP) specifications listed below, your project should look like the solution examples below:
@@ -30,15 +31,29 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+You build stateful class components by first declaring state and adding state into functions containing the state, such as change handlers, onClicks, and axios post requests. This allows your code to react to changing data.
+
 2. Describe the different phases of the component lifecycle.
+
+Mounting, updating, and demounting. Mounting occurs when the DOM is mounted. Here your constructor is placed, any props pass down is implemented, and componentDidMount fires if applied. Updating includes any changes to props or state caused a a re rendering which is the update. Demounting finally occurs when the DOM is unmounted and any lingering functions are removed.
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+render: required method in a class component. it renders component to dom using sstate , props, and code.
+constructor: constructor allows initializing local state by assigning an object to state, and passing in any props frm parent components.
+componentDidMount: Occurs only once in the beginning of mounting application. if successfully mounted, certain functions can be applied such as data request.
+componentDidUpdate: invoked methods whenever  changes to state or props occur.
+componentWillUnMount: invoked before a component is unmounted to ensure ther are no lingering method timers or extraneous data requests.
+
 4. Define stateful logic.
+
+Stateful logic is code with state implemented into them.
 
 5. Describe how to test a React component with React Testing Library.
 
-You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
+testing a react component with react testing library requires you to create a test.js filed, render the component you want to test, and implement react-testing-library methods to ensure your componeent is working properly. Async and await can be applied to help with out of time processes. npm test is used to run your tests.
+
+You are expected to be able to answer questionsin  these areas. Your responses contribute to your Sprint Challenge grade.
 
 ## Instructions
 
