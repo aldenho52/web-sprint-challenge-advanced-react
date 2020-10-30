@@ -1,10 +1,11 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import axios from "axios";
 
 export default class PlantList extends Component {
   // add state with a property called "plants" - initialize as an empty array
   state = {
-    plants: []
+    plants: [],
+    filteredPlantsInput: ''
   }
 
   // when the component mounts:
@@ -23,12 +24,41 @@ export default class PlantList extends Component {
       })
   }
 
+  // STRETCH filter input
+
+  handleSearchInput = (e) => {
+    this.setState({
+      filteredPlantsInput: e.target.value,
+      plants: this.state.plants.filter((plant) => {
+        return plant.name.toLowerCase().indexOf(this.state.filteredPlantsInput.toLowerCase()) !== -1
+      })
+    })
+  }
+
+  // componentDidMount() {
+  //   this.setState({
+  //     plants: JSON.parse(window.localStorage.getItem('plants'))
+  //   })
+  // }
+
+  // componentDidUpdate() {
+  //   window.localStorage.setItem('plants', JSON.stringify(this.state.plants))
+  // }
+
+
+
   /*********  DON'T CHANGE ANYTHING IN THE RENDER FUNCTION *********/
   render() {
     return (
       <main className="plant-list">
+      <input 
+        type='text' 
+        placeholder='Search Plants...'
+        onChange={this.handleSearchInput}
+        value={this.state.filteredPlantsInput}
+      />
         {this.state?.plants?.map((plant) => (
-          <div className="plant-card" key={plant.id}>
+          <div className="plant-card" data-testid="plant-card" key={plant.id}>
             <img className="plant-image" src={plant.img} alt={plant.name} />
             <div className="plant-details">
               <h2 className="plant-name">{plant.name}</h2>
